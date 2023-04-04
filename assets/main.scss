@@ -1,0 +1,113 @@
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-color: $violet;
+  font-family: "Open Sans", sans-serif;
+  background-color: $violet;
+}
+.container {
+  height: 100vh;
+  header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .col-lg-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+      display: table;
+      width: initial;
+      margin: auto;
+      h1 {
+        font-size: 40px;
+        color: #fff;
+        font-weight: 600;
+      }
+      p {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 400;
+      }
+      a {
+        background-color: #fff;
+        color: $soft-magenta;
+        display: inline-block;
+        background: #fff;
+        padding: 13px 50px;
+        border-radius: 25px;
+        text-decoration: none;
+        box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.8);
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: hsl(300, 69%, 71%);
+          color: white;
+        }
+      }
+    }
+  }
+  .social {
+    float: right;
+    display: flex;
+    a {
+      margin: 15px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      transition: 0.4s;
+      &:hover {
+        border-color: $soft-magenta;
+        i {
+          color: $soft-magenta;
+        }
+      }
+    }
+    i {
+      color: #fff;
+      display: table;
+      width: initial;
+      margin: auto;
+    }
+  }
+}
+footer {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .col-lg-4 {
+    display: block;
+    text-align: center;
+  }
+  .col-12 {
+    display: table !important;
+    width: initial;
+    margin: auto;
+    .social {
+    }
+  }
+}
